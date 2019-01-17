@@ -11,7 +11,28 @@ var songs_links = ["https://www.youtube.com/watch?v=IHNzOHi8sJs","https://www.yo
 
 
     // BELOW Use forEach Loop to display the data from each of your array's in the correct div
-}
+  
+    
+songs.forEach(function(element){
+    $("#songs").append("<li>"+element+"</li>")
+    
+});
+images_links.forEach(function(element2){
+    $("#images").append("<img src="+ element2+">")
+    
+});
+artists.forEach(function(element3){
+    $("#artists").append("<li>"+element3+"</li>")
+    
+});
+song_lengths.forEach(function(element4){
+    $("#lengths").append("<li>"+element4+"</li>")
+    
+});
+songs_links.forEach(function(element5){
+    $("#links").append("<a href="+element5+">"+"Play Now"+"</a")
+    
+});
 
 function emptySongInfo(){
     $("#songs").empty();

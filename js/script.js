@@ -12,7 +12,7 @@ var songs_links = ["https://www.youtube.com/watch?v=IHNzOHi8sJs","https://www.yo
 
     // BELOW Use forEach Loop to display the data from each of your array's in the correct div
   
-    
+ function displayList(){   
 songs.forEach(function(element){
     $("#songs").append("<li>"+element+"</li>")
     
@@ -33,9 +33,13 @@ songs_links.forEach(function(element5){
     $("#links").append("<a href="+element5+">"+"Play Now"+"</a")
     
 });
-
+};
 function emptySongInfo(){
     $("#songs").empty();
+    $("#images").empty();
+    $("#artists").empty();
+    $("#lengths").empty();
+    $("#links").empty();
     // Use jQuery to empty all of the remaining divs
 
 
@@ -44,14 +48,28 @@ function emptySongInfo(){
 
 function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
-
+    var userInput = $("#song").val();
+         songs.push(userInput);
+    var userInput2 = $("#artist").val();
+         artists.push(userInput2);
+    var userInput3 = $("#length").val();
+         song_lengths.push(userInput3);
+    var userInput4 = $("#image").val();
+         images_links.push(userInput4);
+    var userInput5 = $("#link").val();
+         songs_links.push(userInput5);
 
 }
 
 $("#add").click(function() {
     emptySongInfo();
+    
     addSongInfo();
-    displaySongInfo();
+    console.log(songs[0])
+    //displaySongInfo();
+   displayList();
 });
 
-displaySongInfo();
+displayList();
+
+//displaySongInfo();

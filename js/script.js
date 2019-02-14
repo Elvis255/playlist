@@ -14,7 +14,7 @@ var songs_links = ["https://www.youtube.com/watch?v=IHNzOHi8sJs","https://www.yo
   
  function displayList(){   
 songs.forEach(function(element){
-    $("#songs").append("<li>"+element+"</li>")
+    $("#songs").append("<p>"+element+"</p>")
     
 });
 images_links.forEach(function(element2){
@@ -22,11 +22,11 @@ images_links.forEach(function(element2){
     
 });
 artists.forEach(function(element3){
-    $("#artists").append("<li>"+element3+"</li>")
+    $("#artists").append("<p>"+element3+"</p>")
     
 });
 song_lengths.forEach(function(element4){
-    $("#lengths").append("<li>"+element4+"</li>")
+    $("#lengths").append("<p>"+element4+"</p>")
     
 });
 songs_links.forEach(function(element5){
